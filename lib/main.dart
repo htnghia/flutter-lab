@@ -8,6 +8,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcom to Flutter',
+      theme: ThemeData(
+        primaryColor: Colors.white,
+      ),
       home: RandomWords(),
     );
   }
@@ -73,7 +76,7 @@ class _RandomWordsState extends State<RandomWords> {
             final divided = tiles.isNotEmpty
                 ? ListTile.divideTiles(context: context, tiles: tiles).toList()
                 : <Widget>[];
-                
+
             return Scaffold(
               appBar: AppBar(
                 title: Text('Saved Suggestions'),
